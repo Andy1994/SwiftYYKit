@@ -17,6 +17,7 @@
 		AA46C73C1C1FC87200044B01 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C73B1C1FC87200044B01 /* ExtensionString.swift */; };
 		AA46C73F1C1FCD8C00044B01 /* ExtensionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C73E1C1FCD8C00044B01 /* ExtensionDate.swift */; };
 		AA46C7411C1FFC9600044B01 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C7401C1FFC9600044B01 /* ExtensionColor.swift */; };
+		AA46C7431C21001900044B01 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C7421C21001900044B01 /* ExtensionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		AA46C73D1C1FC8CB00044B01 /* SwiftYYKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftYYKit-Bridging-Header.h"; sourceTree = "<group>"; };
 		AA46C73E1C1FCD8C00044B01 /* ExtensionDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDate.swift; sourceTree = "<group>"; };
 		AA46C7401C1FFC9600044B01 /* ExtensionColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
+		AA46C7421C21001900044B01 /* ExtensionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				AA46C73E1C1FCD8C00044B01 /* ExtensionDate.swift */,
 				AA46C73B1C1FC87200044B01 /* ExtensionString.swift */,
 				AA46C7401C1FFC9600044B01 /* ExtensionColor.swift */,
+				AA46C7421C21001900044B01 /* ExtensionView.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				AA46C7271C1FACEB00044B01 /* ViewController.swift in Sources */,
 				AA46C73A1C1FC79600044B01 /* ExtensionData.swift in Sources */,
 				AA46C7251C1FACEB00044B01 /* AppDelegate.swift in Sources */,
+				AA46C7431C21001900044B01 /* ExtensionView.swift in Sources */,
 				AA46C7381C1FB03D00044B01 /* ExtensionArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

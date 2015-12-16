@@ -17,8 +17,6 @@ class ViewController: UIViewController {
 //    arrayTemp.reverse()
 //    print(arrayTemp)
     
-    let date = NSDate()
-    print(date.stringWithFormate("yyyy-MM-dd HH:mm"))
   }
 
   override func didReceiveMemoryWarning() {
