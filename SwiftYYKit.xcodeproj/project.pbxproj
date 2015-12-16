@@ -18,6 +18,8 @@
 		AA46C73F1C1FCD8C00044B01 /* ExtensionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C73E1C1FCD8C00044B01 /* ExtensionDate.swift */; };
 		AA46C7411C1FFC9600044B01 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C7401C1FFC9600044B01 /* ExtensionColor.swift */; };
 		AA46C7431C21001900044B01 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C7421C21001900044B01 /* ExtensionView.swift */; };
+		AA46C74B1C213B7100044B01 /* ExtensionScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C74A1C213B7100044B01 /* ExtensionScrollView.swift */; };
+		AA46C74D1C213E8400044B01 /* ExtensionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C74C1C213E8400044B01 /* ExtensionTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		AA46C73E1C1FCD8C00044B01 /* ExtensionDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDate.swift; sourceTree = "<group>"; };
 		AA46C7401C1FFC9600044B01 /* ExtensionColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
 		AA46C7421C21001900044B01 /* ExtensionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
+		AA46C74A1C213B7100044B01 /* ExtensionScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionScrollView.swift; sourceTree = "<group>"; };
+		AA46C74C1C213E8400044B01 /* ExtensionTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				AA46C73B1C1FC87200044B01 /* ExtensionString.swift */,
 				AA46C7401C1FFC9600044B01 /* ExtensionColor.swift */,
 				AA46C7421C21001900044B01 /* ExtensionView.swift */,
+				AA46C74A1C213B7100044B01 /* ExtensionScrollView.swift */,
+				AA46C74C1C213E8400044B01 /* ExtensionTextField.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -163,6 +169,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA46C74B1C213B7100044B01 /* ExtensionScrollView.swift in Sources */,
+				AA46C74D1C213E8400044B01 /* ExtensionTextField.swift in Sources */,
 				AA46C73C1C1FC87200044B01 /* ExtensionString.swift in Sources */,
 				AA46C73F1C1FCD8C00044B01 /* ExtensionDate.swift in Sources */,
 				AA46C7411C1FFC9600044B01 /* ExtensionColor.swift in Sources */,
