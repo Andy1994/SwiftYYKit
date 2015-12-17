@@ -7,8 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
+  
+  /// return String length
+  var length:Int {
+    return characters.count
+  }
+  
+  /// return String MD5
   var MD5: String! {
     let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
     let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
@@ -23,4 +31,129 @@ extension String {
     return String(format: hash as String)
   }
   
+  /**
+  nil, @"", @"  ", @"\n" will Returns NO; otherwise Returns YES.
+  */
+  func isNotBlank() -> Bool {
+    let blank:NSCharacterSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
+    for var i = 0;i < self.characters.count; ++i {
+      let c = (self as NSString).characterAtIndex(i)
+      if !blank.characterIsMember(c) {
+        return true
+      }
+    }
+    return false
+  }
+  
+  /**
+  Create a string with the file in main bundle (similar to [UIImage imageNamed:]).
+  
+  @param name The file name (in main bundle).
+  
+  @return A new string create from the file in UTF-8.
+  */
+  func stringNamed(name:String) -> String? {
+    let path = NSBundle.mainBundle().pathForResource(name, ofType: "")
+    do {
+      let content = try String(contentsOfFile:path!, encoding: NSUTF8StringEncoding)
+      return content
+    } catch _ as NSError {
+      return nil
+    }
+  }
+  
+  /**
+  Returns the size of the string if it were rendered with the specified constraints.
+  
+  @param font          The font to use for computing the string size.
+  
+  @param size          The maximum acceptable size for the string. This value is
+  used to calculate where line breaks and wrapping would occur.
+  
+  @return              The width and height of the resulting string's bounding box.
+  These values may be rounded up to the nearest whole number.
+  */
+  func sizeForFont(font:UIFont, size:CGSize) -> CGSize {
+    let fString = self as NSString
+    let paragraphStyle = NSMutableParagraphStyle()
+    paragraphStyle.lineBreakMode = NSLineBreakMode.ByWordWrapping
+    let attrDict = [
+      NSFontAttributeName: font,
+      NSParagraphStyleAttributeName: paragraphStyle
+    ]
+    let rect = fString.boundingRectWithSize(size,
+      options: [.TruncatesLastVisibleLine, .UsesLineFragmentOrigin],
+      attributes: attrDict,
+      context: nil)
+    return rect.size
+  }
+  
+  /**
+   Returns the width of the string if it were to be rendered with the specified
+   font on a single line.
+   
+   @param font  The font to use for computing the string width.
+   
+   @return      The width of the resulting string's bounding box. These values may be
+   rounded up to the nearest whole number.
+   */
+  func widthForFont(font:UIFont) -> CGFloat {
+    let size = self.sizeForFont(font, size:CGSize(width:CGFloat(MAXFLOAT), height:CGFloat(MAXFLOAT)))
+    return size.width
+  }
+  
+  /**
+   Returns the height of the string if it were rendered with the specified constraints.
+   
+   @param font   The font to use for computing the string size.
+   
+   @param width  The maximum acceptable width for the string. This value is used
+   to calculate where line breaks and wrapping would occur.
+   
+   @return       The height of the resulting string's bounding box. These values
+   may be rounded up to the nearest whole number.
+   */
+  func heightForFont(font:UIFont, width:CGFloat) -> CGFloat {
+    let size = self.sizeForFont(font, size: CGSize(width: width, height: CGFloat(MAXFLOAT)))
+    return size.height
+  }
+  
+  /**
+   Returns all Apple Emoji combines in a string.
+   */
+  static func allEmoji() -> String {
+    struct Static {
+      static var str:String = ""
+      static var onceToken:dispatch_once_t = 0
+    }
+    dispatch_once(&Static.onceToken) {
+      let keys = ["people", "nature", "object", "places", "symbols"]
+      for key in keys {
+        Static.str = Static.str + String.allEmojiByGroup(key)
+      }
+    }
+    return Static.str
+  }
+  
+  /**
+   Returns grouped Apple Emoji combines in a string.
+   
+   @param group Emoji group, support value: @"people" @"nature" @"object" @"places" @"symbols"
+   */
+  static func allEmojiByGroup(group:String) -> String {
+    struct Static {
+      static var dic:Dictionary = ["people":"2333"]
+      static var onceToken:dispatch_once_t = 0
+    }
+    dispatch_once(&Static.onceToken) {
+      Static.dic = [
+        "people" : "😄😃😀😊☺️😉😍😘😚😗😙😜😝😛😳😁😔😌😒😞😣😢😂😭😪😥😰😅😓😩😫😨😱😠😡😤😖😆😋😷😎😴😵😲😟😦😧😈👿😮😬😐😕😯😶😇😏😑👲👳👮👷💂👶👦👧👨👩👴👵👱👼👸😺😸😻😽😼🙀😿😹😾👹👺🙈🙉🙊💀👽💩🔥✨🌟💫💥💢💦💧💤💨👂👀👃👅👄👍👎👌👊✊✌️👋✋👐👆👇👉👈🙌🙏☝️👏💪🚶🏃💃👫👪👬👭💏💑👯🙆🙅💁🙋💆💇💅👰🙎🙍🙇🎩👑👒👟👞👡👠👢👕👔👚👗🎽👖👘👙💼👜👝👛👓🎀🌂💄💛💙💜💚❤️💔💗💓💕💖💞💘💌💋💍💎👤👥💬👣💭",
+        "nature" : "🐶🐺🐱🐭🐹🐰🐸🐯🐨🐻🐷🐽🐮🐗🐵🐒🐴🐑🐘🐼🐧🐦🐤🐥🐣🐔🐍🐢🐛🐝🐜🐞🐌🐙🐚🐠🐟🐬🐳🐋🐄🐏🐀🐃🐅🐇🐉🐎🐐🐓🐕🐖🐁🐂🐲🐡🐊🐫🐪🐆🐈🐩🐾💐🌸🌷🍀🌹🌻🌺🍁🍃🍂🌿🌾🍄🌵🌴🌲🌳🌰🌱🌼🌐🌞🌝🌚🌑🌒🌓🌔🌕🌖🌗🌘🌜🌛🌙🌍🌎🌏🌋🌌🌠⭐️☀️⛅️☁️⚡️☔️❄️⛄️🌀🌁🌈🌊",
+        "object" : "🎍💝🎎🎒🎓🎏🎆🎇🎐🎑🎃👻🎅🎄🎁🎋🎉🎊🎈🎌🔮🎥📷📹📼💿📀💽💾💻📱☎️📞📟📠📡📺📻🔊🔉🔈🔇🔔🔕📢📣⏳⌛️⏰⌚️🔓🔒🔏🔐🔑🔎💡🔦🔆🔅🔌🔋🔍🛁🛀🚿🚽🔧🔩🔨🚪🚬💣🔫🔪💊💉💰💴💵💷💶💳💸📲📧📥📤✉️📩📨📯📫📪📬📭📮📦📝📄📃📑📊📈📉📜📋📅📆📇📁📂✂️📌📎✒️✏️📏📐📕📗📘📙📓📔📒📚📖🔖📛🔬🔭📰🎨🎬🎤🎧🎼🎵🎶🎹🎻🎺🎷🎸👾🎮🃏🎴🀄️🎲🎯🏈🏀⚽️⚾️🎾🎱🏉🎳⛳️🚵🚴🏁🏇🏆🎿🏂🏊🏄🎣☕️🍵🍶🍼🍺🍻🍸🍹🍷🍴🍕🍔🍟🍗🍖🍝🍛🍤🍱🍣🍥🍙🍘🍚🍜🍲🍢🍡🍳🍞🍩🍮🍦🍨🍧🎂🍰🍪🍫🍬🍭🍯🍎🍏🍊🍋🍒🍇🍉🍓🍑🍈🍌🍐🍍🍠🍆🍅🌽",
+        "places" : "🏠🏡🏫🏢🏣🏥🏦🏪🏩🏨💒⛪🏬🏤🌇🌆🏯🏰⛺🏭🗼🗾🗻🌄🌅🌃🗽🌉🎠🎡⛲🎢🚢⛵🚤🚣⚓🚀✈💺🚁🚂🚊🚉🚞🚆🚄🚅🚈🚇🚝🚋🚃🚎🚌🚍🚙🚘🚗🚕🚖🚛🚚🚨🚓🚔🚒🚑🚐🚲🚡🚟🚠🚜💈🚏🎫🚦🚥⚠🚧🔰⛽🏮🎰♨🗿🎪🎭📍🚩🇯🇵🇰🇷🇩🇪🇨🇳🇺🇸🇫🇷🇪🇸🇮🇹🇷🇺🇬🇧",
+        "symbols" : "1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣0️⃣🔟🔢🔣⬆⬇⬅➡🔠🔡🔤↗️↖️↘️↙️↔️↕️🔄◀▶🔼🔽↩↪ℹ⏪⏩⏫⏬⤵⤴🆗🔀🔁🔂🆕🆙🆒🆓🆖📶🎦🈁🈯🈳🈵🈴🈲🉐🈹🈺🈶🈚🚻🚹🚺🚼🚾🚰🚮🅿♿🚭🈷🈸🈂Ⓜ🛂🛄🛅🛃🉑㊙㊗🆑🆘🆔🚫🔞📵🚯🚱🚳🚷🚸⛔✳❇❎✅✴💟🆚📳📴🅰🅱🆎🅾💠➿♻♈♉♊♋♌♍♎♏♐♑♒♓⛎🔯🏧💹💲💱©®™❌‼⁉❗❓❕❔⭕🔝🔚🔙🔛🔜🔃🕛🕧🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦✖️➕➖➗♠️♥️♣️♦️💮💯✔️☑️🔘🔗➰〰〽️🔱◼️◻️◾️◽️▪️▫️🔺🔲🔳⚫️⚪️🔴🔵🔻⬜️⬛️🔶🔷🔸🔹"
+      ]
+    }
+    return Static.dic[group]!
+  }
 }
