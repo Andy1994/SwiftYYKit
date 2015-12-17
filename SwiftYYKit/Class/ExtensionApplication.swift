@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 import UIKit
 
 extension UIApplication {
@@ -79,3 +80,4 @@ extension UIApplication {
     }
   }
 }
+

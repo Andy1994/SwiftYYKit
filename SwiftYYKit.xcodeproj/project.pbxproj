@@ -20,6 +20,7 @@
 		AA46C7431C21001900044B01 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C7421C21001900044B01 /* ExtensionView.swift */; };
 		AA46C74B1C213B7100044B01 /* ExtensionScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C74A1C213B7100044B01 /* ExtensionScrollView.swift */; };
 		AA46C74D1C213E8400044B01 /* ExtensionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C74C1C213E8400044B01 /* ExtensionTextField.swift */; };
+		AAE558001C2268B400F62ECA /* ExtensionApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE557FF1C2268B400F62ECA /* ExtensionApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		AA46C7421C21001900044B01 /* ExtensionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		AA46C74A1C213B7100044B01 /* ExtensionScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionScrollView.swift; sourceTree = "<group>"; };
 		AA46C74C1C213E8400044B01 /* ExtensionTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTextField.swift; sourceTree = "<group>"; };
+		AAE557FF1C2268B400F62ECA /* ExtensionApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				AA46C7421C21001900044B01 /* ExtensionView.swift */,
 				AA46C74A1C213B7100044B01 /* ExtensionScrollView.swift */,
 				AA46C74C1C213E8400044B01 /* ExtensionTextField.swift */,
+				AAE557FF1C2268B400F62ECA /* ExtensionApplication.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				AA46C73A1C1FC79600044B01 /* ExtensionData.swift in Sources */,
 				AA46C7251C1FACEB00044B01 /* AppDelegate.swift in Sources */,
 				AA46C7431C21001900044B01 /* ExtensionView.swift in Sources */,
+				AAE558001C2268B400F62ECA /* ExtensionApplication.swift in Sources */,
 				AA46C7381C1FB03D00044B01 /* ExtensionArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
