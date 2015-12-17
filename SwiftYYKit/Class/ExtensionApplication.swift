@@ -73,7 +73,7 @@ extension UIApplication {
     }
     
     if kerr == KERN_SUCCESS {
-      return info.resident_size
+      return UInt(info.resident_size)
     }
     else {
       return 0

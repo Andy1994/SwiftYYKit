@@ -13,10 +13,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-//    let arrayTemp:NSMutableArray = NSMutableArray(array: [1,2,3,4,5])
-//    arrayTemp.reverse()
-//    print(arrayTemp)
-    
+    print(NSNumber.numberWithString("-0x33"))
   }
 
   override func didReceiveMemoryWarning() {

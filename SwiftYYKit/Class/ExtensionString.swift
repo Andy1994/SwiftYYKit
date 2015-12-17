@@ -11,6 +11,7 @@ import UIKit
 
 extension String {
   
+  //MARK: - Utilities
   /// return String length
   var length:Int {
     return characters.count
@@ -62,6 +63,16 @@ extension String {
     }
   }
   
+  /**
+   Trim blank characters (space and newline) in head and tail.
+   @return the trimmed string.
+   */
+  func stringByTrim() -> String {
+    let set = NSCharacterSet.whitespaceAndNewlineCharacterSet()
+    return self.stringByTrimmingCharactersInSet(set)
+  }
+  
+  //MARK: - Drawing
   /**
   Returns the size of the string if it were rendered with the specified constraints.
   
@@ -118,6 +129,7 @@ extension String {
     return size.height
   }
   
+  //MARK: - Emoji
   /**
    Returns all Apple Emoji combines in a string.
    */
