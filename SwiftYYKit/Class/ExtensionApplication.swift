@@ -13,35 +13,35 @@ import UIKit
 extension UIApplication {
   /// "Documents" folder in this app's sandbox.
   var documentsURL:NSURL {
-    var url = NSURL()
     do {
-      url = try NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
+      let url = try NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
+      return url
     }
-    catch {
+    catch _ as NSError {
+      return NSURL()
     }
-    return url
   }
   
   /// "Caches" folder in this app's sandbox.
   var cachesURL:NSURL {
-    var url = NSURL()
     do {
-      url = try NSFileManager.defaultManager().URLForDirectory(.CachesDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
+      let url = try NSFileManager.defaultManager().URLForDirectory(.CachesDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
+      return url
     }
-    catch {
+    catch _ as NSError {
+      return NSURL()
     }
-    return url
   }
   
   /// "Library" folder in this app's sandbox.
   var libraryURL:NSURL {
-    var url = NSURL()
     do {
-      url = try NSFileManager.defaultManager().URLForDirectory(.LibraryDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
+      let url = try NSFileManager.defaultManager().URLForDirectory(.LibraryDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
+      return url
     }
-    catch {
+    catch _ as NSError {
+      return NSURL()
     }
-    return url
   }
   
   /// Application's Bundle Name (show in SpringBoard).
