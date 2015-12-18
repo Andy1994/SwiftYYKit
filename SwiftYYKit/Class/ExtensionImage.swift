@@ -12,10 +12,9 @@ import ImageIO
 
 extension UIImage {
   
-  //MARK: - Play Gif
+  //MARK: - Play Gif Image
   public class func gifWithData(data: NSData) -> UIImage? {
     guard let source = CGImageSourceCreateWithData(data, nil) else {
-      print("SwiftGif: Source for the image does not exist")
       return nil
     }
     return UIImage.animatedImageWithSource(source)
@@ -23,11 +22,9 @@ extension UIImage {
   
   public class func gifWithName(name: String) -> UIImage? {
     guard let bundleURL = NSBundle.mainBundle().URLForResource(name, withExtension: "gif") else {
-      print("SwiftGif: This image named \"\(name)\" does not exist")
       return nil
     }
     guard let imageData = NSData(contentsOfURL: bundleURL) else {
-      print("SwiftGif: Cannot turn image named \"\(name)\" into NSData")
       return nil
     }
     return gifWithData(imageData)

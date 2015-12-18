@@ -21,6 +21,7 @@
 		AA46C74B1C213B7100044B01 /* ExtensionScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C74A1C213B7100044B01 /* ExtensionScrollView.swift */; };
 		AA46C74D1C213E8400044B01 /* ExtensionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C74C1C213E8400044B01 /* ExtensionTextField.swift */; };
 		AA58F1381C22A497006DEA18 /* ExtensionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA58F1371C22A497006DEA18 /* ExtensionNumber.swift */; };
+		AACEFD7E1C23B3DD00B263B0 /* ExtensionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEFD7D1C23B3DD00B263B0 /* ExtensionImage.swift */; };
 		AAE558001C2268B400F62ECA /* ExtensionApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE557FF1C2268B400F62ECA /* ExtensionApplication.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		AA46C74A1C213B7100044B01 /* ExtensionScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionScrollView.swift; sourceTree = "<group>"; };
 		AA46C74C1C213E8400044B01 /* ExtensionTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTextField.swift; sourceTree = "<group>"; };
 		AA58F1371C22A497006DEA18 /* ExtensionNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionNumber.swift; sourceTree = "<group>"; };
+		AACEFD7D1C23B3DD00B263B0 /* ExtensionImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionImage.swift; sourceTree = "<group>"; };
 		AAE557FF1C2268B400F62ECA /* ExtensionApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 				AA46C74C1C213E8400044B01 /* ExtensionTextField.swift */,
 				AAE557FF1C2268B400F62ECA /* ExtensionApplication.swift */,
 				AA58F1371C22A497006DEA18 /* ExtensionNumber.swift */,
+				AACEFD7D1C23B3DD00B263B0 /* ExtensionImage.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA46C74B1C213B7100044B01 /* ExtensionScrollView.swift in Sources */,
+				AACEFD7E1C23B3DD00B263B0 /* ExtensionImage.swift in Sources */,
 				AA46C74D1C213E8400044B01 /* ExtensionTextField.swift in Sources */,
 				AA58F1381C22A497006DEA18 /* ExtensionNumber.swift in Sources */,
 				AA46C73C1C1FC87200044B01 /* ExtensionString.swift in Sources */,

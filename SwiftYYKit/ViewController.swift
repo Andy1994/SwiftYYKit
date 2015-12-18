@@ -13,7 +13,6 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    print(NSNumber.numberWithString("-0x33"))
   }
 
   override func didReceiveMemoryWarning() {
