@@ -12,15 +12,36 @@ import ImageIO
 
 extension UIImage {
   
+  //MARK: - Round corner Image
+  func roundedCornerImageWithCornerRadius(var cornerRadius:CGFloat) -> UIImage {
+    let w = self.size.width
+    let h = self.size.height
+    let scale = UIScreen.mainScreen().scale
+    if cornerRadius < 0 {
+      cornerRadius = 0
+    }
+    else if cornerRadius > min(w, h) {
+      cornerRadius = min(w, h) / 2
+    }
+    var image:UIImage
+    let imageFrame = CGRect(x: 0, y: 0, width: w, height: h)
+    UIGraphicsBeginImageContextWithOptions(self.size, false, scale)
+    UIBezierPath(roundedRect: imageFrame, cornerRadius: cornerRadius).addClip()
+    self.drawInRect(imageFrame)
+    image = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return image
+  }
+  
   //MARK: - Play Gif Image
-  public class func gifWithData(data: NSData) -> UIImage? {
+  class func gifWithData(data: NSData) -> UIImage? {
     guard let source = CGImageSourceCreateWithData(data, nil) else {
       return nil
     }
     return UIImage.animatedImageWithSource(source)
   }
   
-  public class func gifWithName(name: String) -> UIImage? {
+  class func gifWithName(name: String) -> UIImage? {
     guard let bundleURL = NSBundle.mainBundle().URLForResource(name, withExtension: "gif") else {
       return nil
     }

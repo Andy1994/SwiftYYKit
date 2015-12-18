@@ -22,6 +22,8 @@
 		AA46C74D1C213E8400044B01 /* ExtensionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46C74C1C213E8400044B01 /* ExtensionTextField.swift */; };
 		AA58F1381C22A497006DEA18 /* ExtensionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA58F1371C22A497006DEA18 /* ExtensionNumber.swift */; };
 		AACEFD7E1C23B3DD00B263B0 /* ExtensionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEFD7D1C23B3DD00B263B0 /* ExtensionImage.swift */; };
+		AACEFD801C23DD2400B263B0 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEFD7F1C23DD2400B263B0 /* ExtensionViewController.swift */; };
+		AACEFD821C23F13C00B263B0 /* Test1.png in Resources */ = {isa = PBXBuildFile; fileRef = AACEFD811C23F13C00B263B0 /* Test1.png */; };
 		AAE558001C2268B400F62ECA /* ExtensionApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE557FF1C2268B400F62ECA /* ExtensionApplication.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		AA46C74C1C213E8400044B01 /* ExtensionTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTextField.swift; sourceTree = "<group>"; };
 		AA58F1371C22A497006DEA18 /* ExtensionNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionNumber.swift; sourceTree = "<group>"; };
 		AACEFD7D1C23B3DD00B263B0 /* ExtensionImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionImage.swift; sourceTree = "<group>"; };
+		AACEFD7F1C23DD2400B263B0 /* ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
+		AACEFD811C23F13C00B263B0 /* Test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Test1.png; sourceTree = "<group>"; };
 		AAE557FF1C2268B400F62ECA /* ExtensionApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +81,7 @@
 		AA46C7231C1FACEB00044B01 /* SwiftYYKit */ = {
 			isa = PBXGroup;
 			children = (
+				AACEFD811C23F13C00B263B0 /* Test1.png */,
 				AA46C7361C1FAD0800044B01 /* Class */,
 				AA46C7241C1FACEB00044B01 /* AppDelegate.swift */,
 				AA46C7261C1FACEB00044B01 /* ViewController.swift */,
@@ -103,6 +108,7 @@
 				AAE557FF1C2268B400F62ECA /* ExtensionApplication.swift */,
 				AA58F1371C22A497006DEA18 /* ExtensionNumber.swift */,
 				AACEFD7D1C23B3DD00B263B0 /* ExtensionImage.swift */,
+				AACEFD7F1C23DD2400B263B0 /* ExtensionViewController.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -166,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA46C72F1C1FACEB00044B01 /* LaunchScreen.storyboard in Resources */,
+				AACEFD821C23F13C00B263B0 /* Test1.png in Resources */,
 				AA46C72C1C1FACEB00044B01 /* Assets.xcassets in Resources */,
 				AA46C72A1C1FACEB00044B01 /* Main.storyboard in Resources */,
 			);
@@ -184,6 +191,7 @@
 				AA58F1381C22A497006DEA18 /* ExtensionNumber.swift in Sources */,
 				AA46C73C1C1FC87200044B01 /* ExtensionString.swift in Sources */,
 				AA46C73F1C1FCD8C00044B01 /* ExtensionDate.swift in Sources */,
+				AACEFD801C23DD2400B263B0 /* ExtensionViewController.swift in Sources */,
 				AA46C7411C1FFC9600044B01 /* ExtensionColor.swift in Sources */,
 				AA46C7271C1FACEB00044B01 /* ViewController.swift in Sources */,
 				AA46C73A1C1FC79600044B01 /* ExtensionData.swift in Sources */,
