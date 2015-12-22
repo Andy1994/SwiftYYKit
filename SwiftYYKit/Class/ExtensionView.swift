@@ -15,7 +15,7 @@ extension UIView {
    Create a snapshot image of the complete view hierarchy.
    This method should be called in main thread.
    */
-  func snapshotImage() -> UIImage{
+  func snapshotImage() -> UIImage {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0)
     if self.respondsToSelector("drawViewHierarchyInRect:afterScreenUpdates:") {
       self.drawViewHierarchyInRect(self.bounds, afterScreenUpdates: true)

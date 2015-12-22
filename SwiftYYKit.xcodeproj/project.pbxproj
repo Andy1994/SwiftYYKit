@@ -27,6 +27,19 @@
 		AAE558001C2268B400F62ECA /* ExtensionApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE557FF1C2268B400F62ECA /* ExtensionApplication.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AACEFDB11C24049E00B263B0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AA46C7211C1FACEB00044B01 /* SwiftYYKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftYYKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA46C7241C1FACEB00044B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,10 +99,10 @@
 				AA46C7241C1FACEB00044B01 /* AppDelegate.swift */,
 				AA46C7261C1FACEB00044B01 /* ViewController.swift */,
 				AA46C7281C1FACEB00044B01 /* Main.storyboard */,
-				AA46C72B1C1FACEB00044B01 /* Assets.xcassets */,
 				AA46C72D1C1FACEB00044B01 /* LaunchScreen.storyboard */,
 				AA46C7301C1FACEB00044B01 /* Info.plist */,
 				AA46C73D1C1FC8CB00044B01 /* SwiftYYKit-Bridging-Header.h */,
+				AA46C72B1C1FACEB00044B01 /* Assets.xcassets */,
 			);
 			path = SwiftYYKit;
 			sourceTree = "<group>";
@@ -123,6 +136,7 @@
 				AA46C71D1C1FACEB00044B01 /* Sources */,
 				AA46C71E1C1FACEB00044B01 /* Frameworks */,
 				AA46C71F1C1FACEB00044B01 /* Resources */,
+				AACEFDB11C24049E00B263B0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -145,6 +159,7 @@
 				TargetAttributes = {
 					AA46C7201C1FACEB00044B01 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = SD9N48WGSS;
 					};
 				};
 			};
@@ -310,11 +325,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftYYKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wdabo.SwiftYYKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftYYKit/SwiftYYKit-Bridging-Header.h";
 			};
 			name = Debug;
@@ -324,11 +341,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftYYKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wdabo.SwiftYYKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftYYKit/SwiftYYKit-Bridging-Header.h";
 			};
 			name = Release;

@@ -11,6 +11,18 @@ import UIKit
 
 extension String {
   
+  subscript (i: Int) -> Character {
+    return self[self.startIndex.advancedBy(i)]
+  }
+  
+  subscript (i: Int) -> String {
+    return String(self[i] as Character)
+  }
+  
+  subscript (r: Range<Int>) -> String {
+    return substringWithRange(Range(start: startIndex.advancedBy(r.startIndex), end: startIndex.advancedBy(r.endIndex)))
+  }
+  
   //MARK: - Utilities
   /// return String length
   var length:Int {
@@ -154,7 +166,7 @@ extension String {
    */
   static func allEmojiByGroup(group:String) -> String {
     struct Static {
-      static var dic:Dictionary = ["people":"2333"]
+      static var dic:Dictionary = ["":""]
       static var onceToken:dispatch_once_t = 0
     }
     dispatch_once(&Static.onceToken) {

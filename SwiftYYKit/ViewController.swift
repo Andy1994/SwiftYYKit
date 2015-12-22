@@ -13,14 +13,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let imageView = UIImageView(frame: self.view.bounds)
-    imageView.contentMode = .ScaleAspectFit
-    imageView.image = UIImage(named: "Test1")?.roundedCornerImageWithCornerRadius(20)
-    view.addSubview(imageView)
-    
-    let textField = UITextField(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-    textField.textAlignment = .Center
-    view.addSubview(textField)
+    print("12345".MD5)
   }
 
   override func didReceiveMemoryWarning() {
